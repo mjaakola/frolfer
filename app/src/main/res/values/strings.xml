@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Frolfer</string>
+    <string name="yourScore">Current Score: %1$d</string>
+    <string name="current_hole">Hole: %1$d</string>
+    <string name="minus_button">-</string>
+    <string name="plus_button">+</string>
 </resources>
