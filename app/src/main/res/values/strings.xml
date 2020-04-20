@@ -1,7 +1,42 @@
 <resources>
     <string name="app_name">Frolfer</string>
-    <string name="yourScore">Current Score: %1$d</string>
-    <string name="current_hole">Hole: %1$d</string>
+    <string name="yourScore">Attempts at current hole: %1$d</string>
+    <string name="current_hole">Hole: %1$d of %2$d</string>
     <string name="minus_button">-</string>
     <string name="plus_button">+</string>
+    <string name="alertDialogButton">Set Number of Holes: </string>
+    <string name="pageTwo">Welcome to page 2</string>
+    <string name="newButton">To Page Two</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Frolfer" />
+    <string name="NineHole">9 Holes</string>
+    <string name="EighteenHoles">18 Holes</string>
+    <string name="whichGame">How many holes are you playing?</string>
+    <string name="nextHoleButton">Next Hole</string>
+    <string name="previousHoleButton">Previous Hole</string>
+    <string name="par3Warning">NOTICE: all holes par 3</string>
+
+    <string name="h1">%1$d</string>
+    <string name="h2">%1$d</string>
+    <string name="h3">%1$d</string>
+    <string name="h4">%1$d</string>
+    <string name="h5">%1$d</string>
+    <string name="h6">%1$d</string>
+    <string name="h7">%1$d</string>
+    <string name="h8">%1$d</string>
+    <string name="h9">%1$d</string>
+
 </resources>
