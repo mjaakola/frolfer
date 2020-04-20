@@ -1,26 +1,20 @@
 package com.example.frolfer
 
-import android.app.AlertDialog
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity18Holes : AppCompatActivity() {
 
     internal var score: Int = 0
     internal var hole: Int = 1
-    val total_holes = 18
+    private val totalHoles = 18
     internal lateinit var addition: Button
     internal lateinit var minus: Button
-    internal lateinit var current_score: TextView
-    internal lateinit var hole_number: TextView
+    internal lateinit var currentScore: TextView
+    internal lateinit var holeNumber: TextView
 
 
     companion object {
@@ -35,12 +29,12 @@ class MainActivity18Holes : AppCompatActivity() {
 
         Log.d(TAG, "onCreate called. Score is: $score")
 
-        current_score = findViewById(R.id.current_score)
-        current_score.text = getString(R.string.yourScore, score)
-        hole_number = findViewById(R.id.hole_number)
-        hole_number.text = getString(R.string.current_hole, hole, total_holes )
-        val addition = findViewById(R.id.addition) as Button
-        val minus = findViewById(R.id.minus) as Button
+        currentScore = findViewById(R.id.current_score)
+        currentScore.text = getString(R.string.yourScore, score)
+        holeNumber = findViewById(R.id.hole_number)
+        holeNumber.text = getString(R.string.current_hole, hole, totalHoles )
+        val addition = findViewById<Button>(R.id.addition)
+        val minus = findViewById<Button>(R.id.minus)
         addition.setOnClickListener{
             incrementScore()
         }
@@ -68,13 +62,13 @@ class MainActivity18Holes : AppCompatActivity() {
     private fun incrementScore() {
         score += 1
         val newScore = getString(R.string.yourScore, score)
-        current_score.text = newScore
+        currentScore.text = newScore
     }
 
     private fun decreaseScore() {
         score -= 1
         val newScore = getString(R.string.yourScore, score)
-        current_score.text = newScore
+        currentScore.text = newScore
     }
 
     override fun onSupportNavigateUp(): Boolean {
