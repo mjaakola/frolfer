@@ -7,9 +7,19 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/par3Warning"
+        android:layout_width="168dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/par3Warning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/current_score"
-        android:layout_width="88dp"
-        android:layout_height="61dp"
+        android:layout_width="216dp"
+        android:layout_height="29dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/yourScore"
@@ -18,8 +28,8 @@
 
     <TextView
         android:id="@+id/hole_number"
-        android:layout_width="115dp"
-        android:layout_height="55dp"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/current_hole"
@@ -28,26 +38,177 @@
 
     <Button
         android:id="@+id/addition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_width="80dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
         android:text="@string/plus_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/minus"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/minus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="80dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="84dp"
         android:text="@string/minus_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextHoleButton"
+        android:layout_width="80dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/nextHoleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/previousHoleButton"
+        android:layout_width="109dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/previousHoleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="375dp"
+        android:layout_height="509dp"
+        android:layout_marginStart="20dp"
+        android:stretchColumns="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.801">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/hole1"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/hole2"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h2" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/hole3"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h3" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/hole4"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h4" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/hole5"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h5" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="6" />
+
+            <TextView
+                android:id="@+id/hole6"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h6" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/hole7"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h7" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/hole8"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h8" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="9" />
+
+            <TextView
+                android:id="@+id/hole9"
+                android:layout_column="1"
+                android:padding="3dip"
+                android:text="@string/h9" />
+        </TableRow>
+
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
