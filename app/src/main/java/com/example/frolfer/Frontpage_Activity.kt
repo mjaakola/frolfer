@@ -11,24 +11,16 @@ class Frontpage_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frontpage)
 
-        configureNineHoleButton()
-        configureEighteenHoleButton()
+        configureCustomGameButton()
 
     }
 
-    private fun configureNineHoleButton() {
-        val nineHoleButton = findViewById<Button>(R.id.NineHoleButton)
-        nineHoleButton.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+    private fun configureCustomGameButton() {
+        val CustomGameButton = findViewById<Button>(R.id.customGameButton)
+        CustomGameButton.setOnClickListener{
+            val intent = Intent(this, NumberOfHolesActivity::class.java)
             startActivity(intent)
         }
     }
 
-    private fun configureEighteenHoleButton() {
-        val EighteenHoleButton = findViewById<Button>(R.id.EighteenHoleButton)
-        EighteenHoleButton.setOnClickListener{
-            val intent = Intent(this, MainActivity18Holes::class.java)
-            startActivity(intent)
-        }
-    }
 }

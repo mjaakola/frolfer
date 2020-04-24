@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/par3Warning"
-        android:layout_width="168dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/par3Warning"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/current_score"
@@ -76,139 +67,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TableLayout
-        android:id="@+id/tableLayout2"
-        android:layout_width="375dp"
-        android:layout_height="509dp"
-        android:layout_marginStart="20dp"
-        android:stretchColumns="1"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView9Hole"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801">
+        app:layout_constraintTop_toBottomOf="@+id/addition"
+        tools:listitem="@layout/recycler_card_view" />
 
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="1" />
-
-            <TextView
-                android:id="@+id/hole1"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h1" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="2" />
-
-            <TextView
-                android:id="@+id/hole2"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h2" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="3" />
-
-            <TextView
-                android:id="@+id/hole3"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h3" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="4" />
-
-            <TextView
-                android:id="@+id/hole4"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h4" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="5" />
-
-            <TextView
-                android:id="@+id/hole5"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h5" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="6" />
-
-            <TextView
-                android:id="@+id/hole6"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h6" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="7" />
-
-            <TextView
-                android:id="@+id/hole7"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h7" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="8" />
-
-            <TextView
-                android:id="@+id/hole8"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h8" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:padding="3dip"
-                android:text="9" />
-
-            <TextView
-                android:id="@+id/hole9"
-                android:layout_column="1"
-                android:padding="3dip"
-                android:text="@string/h9" />
-        </TableRow>
-
-    </TableLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
