@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Frolfer</string>
     <string name="yourScore">Shots: %1$d</string>
-    <string name="current_hole">Hole: %1$d of %2$d</string>
+    <string name="current_hole">Hole: %1$d</string>
+    <string name="current_hole_only">Hole: %1$d</string>
     <string name="minus_button">-</string>
     <string name="plus_button">+</string>
-    <string name="alertDialogButton">Set Number of Holes: </string>
     <string name="pageTwo">Welcome to page 2</string>
-    <string name="newButton">To Page Two</string>
+    <string name="CustomGameButton">Create Custom Scoreboard</string>
+    <string name="createScorecardButton">Create Scorecard</string>
+    <string name="total_holes">%1$d</string>
+    <string name="Attempt">Shots: %1$d</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -28,15 +31,8 @@
     <string name="nextHoleButton">Next Hole</string>
     <string name="previousHoleButton">Previous Hole</string>
     <string name="par3Warning">Pro Par Mode</string>
+    <string name="textInputCustomGame">textInputCustomGame</string>
+    <string name="editTextEnter">Enter number of holes</string>
 
-    <string name="h1">%1$d</string>
-    <string name="h2">%1$d</string>
-    <string name="h3">%1$d</string>
-    <string name="h4">%1$d</string>
-    <string name="h5">%1$d</string>
-    <string name="h6">%1$d</string>
-    <string name="h7">%1$d</string>
-    <string name="h8">%1$d</string>
-    <string name="h9">%1$d</string>
 
 </resources>

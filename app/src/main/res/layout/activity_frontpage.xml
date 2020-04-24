@@ -7,32 +7,12 @@
     tools:context=".Frontpage_Activity">
 
     <Button
-        android:id="@+id/NineHoleButton"
+        android:id="@+id/customGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="212dp"
-        android:text="@string/NineHole"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/EighteenHoleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="280dp"
-        android:text="@string/EighteenHoles"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/frontPageTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="172dp"
-        android:text="@string/whichGame"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/CustomGameButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

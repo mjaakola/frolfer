@@ -1,30 +1,21 @@
 package com.example.frolfer
 
-import android.app.AlertDialog
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import org.w3c.dom.Text
+import androidx.recyclerview.widget.LinearLayoutManager
 
 class MainActivity : AppCompatActivity() {
-    internal var golfScore = mutableListOf<Int>(0)
-    internal val stringList = listOf<String>("h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8", "h9")
     internal var score: Int = 0
     internal var hole: Int = 1
-    internal val total_holes = 9
-    internal var par = 3
+    internal var total_holes: Int = 0
     internal lateinit var addition: Button
     internal lateinit var minus: Button
     internal lateinit var current_score: TextView
     internal lateinit var hole_number: TextView
-    internal lateinit var hole_score: TextView
 
 
     companion object {
@@ -37,13 +28,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //initialize score, current hole
+        //initialize variables
         hole_number = findViewById(R.id.hole_number)
-        hole_number.text = getString(R.string.current_hole, hole, total_holes)
+        hole_number.text = getString(R.string.current_hole, hole)
         current_score = findViewById(R.id.current_score)
         current_score.text = getString(R.string.yourScore, score)
-        hole_score = findViewById(R.id.hole1)
-        hole_score.text = getString(R.string.h1, golfScore[0])
+        val totalHoles = intent.getIntExtra("TOTAL_HOLES", 0 )
+        total_holes = totalHoles
+        val scoreList = generateList(size = totalHoles + 1)                             // adapt for # of holes + 1
+        recyclerView9Hole.adapter = ExampleAdapter(scoreList)
+        recyclerView9Hole.layoutManager = LinearLayoutManager(this)
+        recyclerView9Hole.setHasFixedSize(true)
 
         //initialize buttons
         val addition = findViewById(R.id.addition) as Button
@@ -90,46 +85,37 @@ class MainActivity : AppCompatActivity() {
             current_score.text = newScore
         }
     }
-    /*
-    private fun nextHole() {
-        for (i in stringList) {
-            if (hole < 9) {
-                hole += 1
-                val newHole = getString(R.string.current_hole, hole, total_holes)
-                hole_number.text = newHole
-                golfScore.add(index = (hole-2), element = score - par)
-                Log.d(TAG, "golfScore: " + golfScore)
-                hole_score.text = getString(R.id.stringList[i], golfScore[0])
-                score = 0
-                current_score.text = getString(R.string.yourScore, score)
-            }
-        }
-    }
-*/
 
     private fun nextHole() {
-        if (hole < 9) {
+        if (hole < total_holes) {
             hole += 1
-            val newHole = getString(R.string.current_hole, hole, total_holes)
+            val newHole = getString(R.string.current_hole, hole)
             hole_number.text = newHole
-            golfScore.add(index = (hole-2), element = score - par)
-            Log.d(TAG, "golfScore: " + golfScore)
-            hole_score.text = getString(R.string.h1, golfScore[0])
             score = 0
             current_score.text = getString(R.string.yourScore, score)
-            golfScore.joinToString()
         }
     }
 
     private fun previousHole() {
         if (hole > 1) {
             hole -= 1
-            val newHole = getString(R.string.current_hole, hole, total_holes)
+            val newHole = getString(R.string.current_hole, hole)
             hole_number.text = newHole
             score = 0
             current_score.text = getString(R.string.yourScore, score)
         }
     }
+
+    // RecyclerView
+    private fun generateList(size: Int): List<RecyclerViewItem> {
+        val list = ArrayList<RecyclerViewItem>()
+            for (i in 0+1 until size) {
+                val holei = RecyclerViewItem("Hole $i", "@string/Attempt", "@string/par3Warning")
+                list += holei
+            }
+            return list
+    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
